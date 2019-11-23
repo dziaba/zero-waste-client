@@ -1,3 +1,4 @@
+import { HeaderModule } from './page/common/header/header.module';
 import { LoginModule } from './page/login/login.module';
 import { ContactModule } from './page/contact/contact.module';
 import { HomeModule } from './page/home/home.module';
@@ -26,6 +27,7 @@ export function createTranslateLoader(http: HttpClient) {
     HomeModule,
     LoginModule,
     ContactModule,
+    HeaderModule,
     BrowserAnimationsModule,
     HttpClientModule,
     TranslateModule.forRoot({
