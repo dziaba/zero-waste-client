@@ -1,2 +1,41 @@
-<button mat-button>Click me!</button>
-<p>{{'home.home-test' | translate}}</p>
+<header>
+    <span (click)="home()"></span>
+    <img class="recycle"  src="/assets/images/recycle.png" alt="bin" >
+  <nav>
+<a class="login" href="">LOGIN</a>
+  </nav>
+</header>
+<section>
+  <div class="parent">
+    <div class="div1">
+      <p>Wydarzenia</p>
+    </div>
+    <div class="div2">
+      <p>Follow</p>
+    </div>
+    <div class="div3">
+      <p>Ranking</p>
+    </div>
+    <div class="div4" (click)="knowladge()">
+      <p>Baza danych </p>
+    </div>
+    <div class="div5" (click)="recommend()">
+      <p>Polecamy</p>
+    </div>
+    <div class="div6" (click)="zeroWaste()">
+      <p>Zero Waste</p>
+    </div>
+    <div class="div7">
+      <p>Profil</p>
+    </div>
+    <div class="div8">
+      <p>Kontakt</p>
+    </div>
+  </div>
+</section>
+<footer>
+  <i class="fab fa-facebook-square"></i>
+  <i class="fab fa-instagram"></i>
+  <i class="fab fa-twitter-square"></i>
+  <i class="fab fa-youtube"></i>
+</footer>
