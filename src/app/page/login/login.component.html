@@ -1,6 +1,6 @@
 <ng-container *ngIf="reje===false"><p>{{'login.login-nag'| translate}}</p>
 <form #flog="ngForm" (ngSubmit)="wyslijlog()">
-<p>{{'login.login-log'| translate}}<input #loginlog="ngModel" id="login" class=form-control name="login" required [(ngModel)]="logusr.login" type="text"><ng-container *ngIf="loginlog.invalid && (loginlog.dirty || loginlog.touched)">{{'login.reje-er3'|translate}}</ng-container></p>
+<p>{{'login.login-log'| translate}}<input #loginlog="ngModel" id="login" class=form-control name="login" required [(ngModel)]="logusr.email" type="text"><ng-container *ngIf="loginlog.invalid && (loginlog.dirty || loginlog.touched)">{{'login.reje-er3'|translate}}</ng-container></p>
 <p>{{'login.login-has'| translate}}<input #passwordlog="ngModel" minlength="6" id="pass" class=form-control name="pass" required [(ngModel)]="logusr.password" type="password"><ng-container *ngIf="passwordlog.invalid && (passwordlog.dirty || passwordlog.touched)">{{'login.reje-er1'|translate}}</ng-container></p>
 <p><button [disabled]="!flog.form.valid">{{'login.login-wys'| translate}}</button></p>
 </form>

@@ -9,11 +9,8 @@ import { User } from '../models/user';
 })
 export class LoginCommunicationService {
   serwer = 'https://ptsv2.com/t/1tvvs-1574476938/post';
-  sprawdzdup = new HttpParams({ fromString: 'rozkaz=test' });
-  getuser(nowa: User): Observable<User> {
-    console.log(JSON.stringify(nowa));
-    console.log(this.http.post<User>(this.serwer, JSON.stringify(nowa)));
-    return this.http.post<User>(this.serwer, JSON.stringify(nowa));
+  postuser(nowa: User, fixx: string): Observable<User> {
+    return this.http.post<User>(this.serwer /*+ fixx*/, JSON.stringify(nowa));
   }
 
   constructor(private http: HttpClient) { }
