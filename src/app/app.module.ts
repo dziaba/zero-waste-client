@@ -17,6 +17,7 @@ import {AccordionModule} from 'primeng/accordion';
 import { ProfileComponent } from './page/home/profile/profile.component';
 
 
+
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
