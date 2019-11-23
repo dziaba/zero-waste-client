@@ -1,3 +1,4 @@
+import { HeaderModule } from './../common/header/header.module';
 import { TranslateModule } from '@ngx-translate/core';
 import { MaterialModule } from './../../core/material/material.module';
 import { NgModule } from '@angular/core';
