@@ -9,7 +9,6 @@ import { KnowladgeComponent } from './knowladge/knowladge.component';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
   constructor(private _router: Router) { }
 
   ngOnInit() {
