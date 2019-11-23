@@ -25,5 +25,8 @@ export class HomeComponent implements OnInit {
   zeroWaste(){
     this._router.navigate(['/zero-waste']);
   }
+  profile(){
+    this._router.navigate(['/profile']);
+  }
 }
 
