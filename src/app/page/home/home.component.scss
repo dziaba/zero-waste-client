@@ -1,125 +1,163 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
+
 //Style dla nagłówka//
 
-header{
-    display:flex;
-    position:sticky;
-    background-color: rgb(233, 252, 230);
-    height:120px;
-   
+header {
+  display: flex;
+  position: sticky;
+  background-color: rgb(233, 252, 230);
+  height: 120px;
+
 }
 
-header .login{
-    justify-content: right ;
-    
+header .login {
+  justify-content: right;
+
 }
 
 @keyframes rotate-center {
-    0% {
-      -webkit-transform: rotate(0);
-              transform: rotate(0);
-    }
-    100% {
-      -webkit-transform: rotate(360deg);
-              transform: rotate(360deg);
-    }
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
-  .recycle:hover {
-	-webkit-animation: rotate-center 0.6s ease-in-out both;
-	        animation: rotate-center 0.6s ease-in-out both;
-    }  
-.recycle{
-position:absolute;
-margin: 10px 10px 5px 10px;
-width: 100px;
-height: 100px;
+
+.recycle:hover {
+  -webkit-animation: rotate-center 0.6s ease-in-out both;
+  animation: rotate-center 0.6s ease-in-out both;
+}
+
+.recycle {
+  position: absolute;
+  margin: 10px 10px 5px 10px;
+  width: 100px;
+  height: 100px;
 }
 
 
 //Style dla sekcji//
 
-section{
-    
-    width: 100%;
-    
+section {
+  width: 100%;
+  height: 67vh;
+
 }
+
 .parent {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-    margin: 50px 100px 70px;
-    justify-content: center;
-    align-items: center;
-    
-    }
-    p{
-    
-        vertical-align: middle;
-        font-size: 2rem;
-        text-align: center;
-        font-weight: 500;
-        
-        margin-top: 50px;
-        
-        
-    }
-    .div1, .div2, .div3, .div4, .div5, .div5, .div6,.div7, .div8{
-        background-color: rgb(253, 233, 231);
-        
-        border-radius: 20px;
-        color: rgb(26, 88, 100); 
-        width: 250px;
-        height: 250px;
-        box-shadow: 0 0 1em rgba(0,0,0,0.5);
-        transition: 2s all;
-       
-          
-    }
-    .div1:hover, .div2:hover, .div3:hover, .div4:hover, .div5:hover, .div5:hover, .div6:hover,.div7:hover, .div8:hover{
-        background-color: rgb(26, 88, 100);
-        color:#FFFFFF;
-        transition: none;
-        
-    }
-    .div1 { 
-       grid-area: 1 / 1 / 2 / 2;}
-      
-    .div2 { 
-        grid-area: 1 / 2 / 2 / 3; }
-    .div3 { 
-        grid-area: 1 / 3 / 2 / 4; }
-    .div4 { 
-        grid-area: 1 / 4 / 2 / 5; }
-    .div5 { 
-        grid-area: 2 / 1 / 3 / 2; }
-    .div6 { 
-        grid-area: 2 / 2 / 3 / 3; }
-    .div7 { 
-        grid-area: 2 / 3 / 3 / 4; }
-    .div8 { 
-        grid-area: 2 / 4 / 3 / 5; } 
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 30px;
+  margin: 50px 100px 70px;
+  justify-content: center;
+  align-items: center;
 
-    
-    .news{
-       
-       margin-left: 90px;
-      
-       
-    }
-
-//Style dla Stopki//
-
-footer{
-    height: 50px;
-    background-color: #1a5869;
-    align-items: center;
-}   
-
-.fa-facebook-square, .fa-instagram, .fa-twitter-square, .fa-youtube {
-    width: 25px;
-    height: 25px;
+  .disabled-tiles {
+    position: absolute;
+    margin-left: 75px;
+    margin-top: 62px;
+    transform: rotate(45deg);
+    z-index: 1;
+    cursor: no-drop;
+  }
 }
+
+p {
+  vertical-align: middle;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 500;
+
+  margin-top: 50px;
+
+
+}
+
+.div1,
+.div2,
+.div3,
+.div4,
+.div5,
+.div5,
+.div6,
+.div7,
+.div8 {
+  background-color: rgb(253, 233, 231);
+  margin: auto;
+
+  border-radius: 20px;
+  color: rgb(26, 88, 100);
+  width: 250px;
+  height: 250px;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+  transition: 1.5s all;
+  cursor: pointer;
+
+}
+
+// .div1:hover,
+.div2:hover,
+.div3:hover,
+.div4:hover,
+.div5:hover,
+.div5:hover,
+.div6:hover,
+.div7:hover,
+.div8:hover {
+  background-color: rgb(26, 88, 100);
+  color: #FFFFFF;
+  transition: none;
+
+}
+
+.div1 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.div2 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.div3 {
+  grid-area: 1 / 3 / 2 / 4;
+}
+
+.div4 {
+  grid-area: 1 / 4 / 2 / 5;
+}
+
+.div5 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+.div6 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.div7 {
+  grid-area: 2 / 3 / 3 / 4;
+}
+
+.div8 {
+  grid-area: 2 / 4 / 3 / 5;
+}
+
+.div1 {
+  opacity: 0.5;
+  background: #CCC;
+  cursor: no-drop;
+}
+
+.news {
+  margin-left: 90px;
+}
+
+
