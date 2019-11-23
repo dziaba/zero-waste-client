@@ -5,6 +5,7 @@ import { ContactModule } from './page/contact/contact.module';
 import { HomeModule } from './page/home/home.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {MatInputModule} from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import {AccordionModule} from 'primeng/accordion';
 import { ProfileComponent } from './page/home/profile/profile.component';
 import {GalleriaModule} from 'primeng/galleria';
+
 
 
 export function createTranslateLoader(http: HttpClient) {

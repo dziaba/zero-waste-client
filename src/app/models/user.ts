@@ -5,4 +5,5 @@ export class User {
   name: string;
   surename: string;
   userId?: number;
+  aktywny ?= false;
 }

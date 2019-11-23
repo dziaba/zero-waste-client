@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { User } from 'src/app/models/user';
 import { LoginCommunicationService } from 'src/app/services/login-communication.service';
+import { LoginService } from 'src/app/services/login.service';
+import { MatFormFieldControl } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -11,33 +15,35 @@ export class LoginComponent implements OnInit {
   reje = false;
   logusr = new User();
   mailtest = new RegExp('@');
-  constructor(private serwerkurwa: LoginCommunicationService) { }
+  constructor(private _router: Router, private loginservice: LoginService) { }
   ngOnInit() {
   }
   zareje(): void {
     this.reje = true;
   }
 
-  wyslijlog(): void {
-    console.log('log');
-    // odwołuję się do serwisu teraz i czekam na odpowiedź
-  }
-  wyslijrej(): void {
-    if (this.logusr.login.length > 0 && this.logusr.password.length > 5 && this.mailtest.test(this.logusr.email.toLowerCase())) {
-      // wszystko zamknij w funkcji która czeka na powrót czy użytkownik o danym loginie lub mailu istnieje
-      console.log('O CHUJ');
-      this.zapytanie(this.logusr);
-      // koniec zamknięcia
-    } else {
-      console.log('I CHUJ');
+  zalog(a: string, b: string): void {
+    this.logusr.login = a;
+    this.logusr.password = b;
+    if (b.length > 5) {
+      if (a === this.loginservice.userik.login && b === this.loginservice.userik.password) {
+        this.loginservice.zapiszlogin();
+        this._router.navigate(['/home']);
+      } else {
+        this._router.navigate(['/login']);
+      }
     }
   }
 
-  zapytanie(dane: any) {
-    this.serwerkurwa.getuser(this.logusr).subscribe((odpo: any) => this.udane(odpo));
-  }
-
-  udane(xd: any) {
-
+  rejestr(a: string, b: string, c: string, d: string, e: string): void {
+    this.logusr.login = a;
+    this.logusr.password = b;
+    this.logusr.email = c;
+    this.logusr.name = d;
+    this.logusr.surename = e;
+    if (b.length > 5 && this.mailtest.test(this.logusr.email.toLowerCase())) {
+      this.loginservice.zapiszrejes(this.logusr);
+      this._router.navigate(['/home']);
+    }
   }
 }
