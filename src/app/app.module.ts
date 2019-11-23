@@ -16,6 +16,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import {AccordionModule} from 'primeng/accordion';
 import { ProfileComponent } from './page/home/profile/profile.component';
+import {GalleriaModule} from 'primeng/galleria';
 
 
 
@@ -36,6 +37,7 @@ export function createTranslateLoader(http: HttpClient) {
     ContactModule,
     HeaderModule,
     FooterModule,
+    GalleriaModule,
     AccordionModule,
     BrowserAnimationsModule,
     HttpClientModule,
