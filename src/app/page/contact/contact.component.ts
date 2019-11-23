@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { MatFormFieldControl } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-contact',
@@ -7,14 +11,12 @@ import { FormsModule, NgForm } from '@angular/forms';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
-  xd: string;
-
-  constructor() { }
+ constructor(private _router: Router) { }
 
   ngOnInit() {
   }
 
-  wysli(tekst: any, typ: any) {
-    console.log('YEEEEEEEEEEEEEEEEEET ' + typ.value + '   ' + tekst.value);
-  }
+    funkcja(){
+      this._router.navigate(['/home']);
+    }
 }

@@ -5,6 +5,7 @@
   <img class="small-image" src="./../../../assets/images/Zero_Waste_Logo2.png" alt="kzk">
   <!-- <p class="zero-waste">Zero Waste</p> -->
   <div class="margin">
-      <button mat-fab class="login">Login</button>
+      <p *ngIf='uzyt.aktywny===true' class="login">{{uzyt.login}}</p>
+      <button mat-fab (click)='plogon()' *ngIf='uzyt.aktywny!=true' class="login">Zaloguj</button>
   </div>
 </header>
