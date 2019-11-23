@@ -1,9 +1,11 @@
-<ng-container *ngFor='let osobix of userk'>
-<div class="bloki">
-<div class="ba">Login:  {{osobix.login}}</div>
-<div class="bb">{{osobix.punkty}}</div>
-<div class="bc">Imię i Nazwisko:{{osobix.name}} {{osobix.surename}}</div>
-<br>
-</div>
-<br>
-</ng-container>
+<section>
+  <ng-container *ngFor='let osobix of userk'>
+    <div class="bloki">
+      <div class="ba">Login: {{osobix.login}}</div>
+      <div class="bb">{{osobix.punkty}}</div>
+      <div class="bc">Imię i Nazwisko:{{osobix.name}} {{osobix.surename}}</div>
+      <br>
+    </div>
+    <br>
+  </ng-container>
+</section>

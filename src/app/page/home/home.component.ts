@@ -27,6 +27,11 @@ export class HomeComponent implements OnInit {
   profile(){
     this._router.navigate(['/profile']);
   }
+
+  contact(){
+    this._router.navigate(['/contact']);
+  }
+
   rankings(){
     this._router.navigate(['/ranking']);
   }

@@ -44,11 +44,27 @@ section{
     padding: 20px;
     box-shadow:0 0 1em rgba(0,0,0,0.5);
     margin: 20px auto;
+    border-radius: 10px;
 }
 h3{
     text-align: center;
 }
 p{
     text-align: justify;
+}
+
+.flex-tiles {
+  display: flex;
+
+  .with-size {
+    width: 45%;
+  }
+
+  .image-size {
+    width: 16%;
+    border-radius: 10px;
+    margin: auto 16% auto 3%;
+    transform: rotate(10deg);
+  }
 
 }
