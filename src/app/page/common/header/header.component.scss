@@ -5,11 +5,15 @@
 .panel-header {
   display: flex;
 
-  .zero-waste {
-    font-size: 50px;
+  .hand {
+    cursor: pointer;
+  }
+
+  .small-image {
+    width: 180px;
+    padding-left: 25px;
+    padding-right: 25px;
     margin: auto;
-    font-family: monospace;
-    color: #1b9330;
   }
 
   .margin {

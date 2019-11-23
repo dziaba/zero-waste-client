@@ -1,3 +1,4 @@
+import { FooterModule } from './page/common/footer/footer.module';
 import { HeaderModule } from './page/common/header/header.module';
 import { LoginModule } from './page/login/login.module';
 import { ContactModule } from './page/contact/contact.module';
@@ -13,6 +14,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import {AccordionModule} from 'primeng/accordion';
+import { ProfileComponent } from './page/home/profile/profile.component';
+
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -21,6 +25,7 @@ export function createTranslateLoader(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,6 +34,8 @@ export function createTranslateLoader(http: HttpClient) {
     LoginModule,
     ContactModule,
     HeaderModule,
+    FooterModule,
+    AccordionModule,
     BrowserAnimationsModule,
     HttpClientModule,
     TranslateModule.forRoot({
