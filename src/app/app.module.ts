@@ -1,4 +1,5 @@
 import { LoginModule } from './page/login/login.module';
+import { ContactModule } from './page/contact/contact.module';
 import { HomeModule } from './page/home/home.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -17,13 +18,14 @@ export function createTranslateLoader(http: HttpClient) {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HomeModule,
     LoginModule,
+    ContactModule,
     BrowserAnimationsModule,
     HttpClientModule,
     TranslateModule.forRoot({

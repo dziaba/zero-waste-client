@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LoginComponent } from './login.component';
+import { ContactComponent } from './contact.component';
 import { MaterialModule } from 'src/app/core/material/material.module';
 import { TranslateModule } from '@ngx-translate/core';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [LoginComponent],
+  declarations: [ContactComponent],
   imports: [
     CommonModule,
     MaterialModule,
     TranslateModule,
     FormsModule
   ],
-  exports: [LoginComponent]
+  exports: [ContactComponent]
 })
-export class LoginModule { }
+export class ContactModule { }

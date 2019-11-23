@@ -1,0 +1,11 @@
+<form #fwys="ngForm" (ngSubmit)="wysli(notka,selekcik)">
+    <p>{{'contact.con-naz'| translate}}<br><textarea cols="50" rows="5" name='notka' id='notka' #notka="ngModel" required [(ngModel)]="xd"></textarea><ng-container *ngIf="notka.invalid && (notka.dirty || notka.touched)">{{'login.reje-er3'|translate}}</ng-container></p>
+    <p><select #selekcik required>
+        <option value="1">{{'contact.con-op1'| translate}}</option>
+        <option value="2">{{'contact.con-op2'| translate}}</option>
+        <option value="3">{{'contact.con-op3'| translate}}</option>
+        <option value="4">{{'contact.con-op4'| translate}}</option>
+        <option value="5">{{'contact.con-op5'| translate}}</option>
+      </select></p>
+      <button [disabled]="!fwys.form.valid">Wyślij</button>
+</form>
