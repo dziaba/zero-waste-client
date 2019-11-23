@@ -31,5 +31,9 @@ export class HomeComponent implements OnInit {
   contact(){
     this._router.navigate(['/contact']);
   }
+
+  rankings(){
+    this._router.navigate(['/ranking']);
+  }
 }
 
