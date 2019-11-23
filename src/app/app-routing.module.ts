@@ -7,6 +7,7 @@ import { RecommendComponent } from './page/home/recommend/recommend.component';
 import { KnowladgeComponent } from './page/home/knowladge/knowladge.component';
 import { ZeroWasteComponent } from './page/home/zero-waste/zero-waste.component';
 import { ProfileComponent } from './page/home/profile/profile.component';
+import { RankingComponent } from './page/home/ranking/ranking.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'profile', component:ProfileComponent },
+  { path: 'ranking', component:RankingComponent },
   { path: '**', component: HomeComponent }
 ];
 

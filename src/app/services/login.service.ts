@@ -10,14 +10,15 @@ export class LoginService {
     password: '123456',
     email: 'przyklad@domena.pl',
     name: 'Jan',
-    surename: 'Kowalski'
+    surename: 'Kowalski',
+    followy: [],
   };
 
   zapiszlogin() {
     this.userik.aktywny = true;
   }
 
-  zapiszrejes(a:User) {
+  zapiszrejes(a: User) {
     this.userik.login = a.login;
     this.userik.password = a.password;
     this.userik.email = a.email;
