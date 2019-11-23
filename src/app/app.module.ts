@@ -1,4 +1,5 @@
 import { LoginModule } from './page/login/login.module';
+import { ContactModule } from './page/contact/contact.module';
 import { HomeModule } from './page/home/home.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -11,21 +12,20 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-import { OAuthModule } from 'angular-oauth2-oidc';
-
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HomeModule,
     LoginModule,
+    ContactModule,
     BrowserAnimationsModule,
     HttpClientModule,
     TranslateModule.forRoot({

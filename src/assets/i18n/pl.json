@@ -20,5 +20,16 @@
     "reje-er2":"Hasła nie są takie same",
     "reje-er3":"Pole Wymagane",
     "reje-er4":"Nazwa jest już zajęta"
+  },
+  "contact": {
+    "con-naz":"Opisz twoją propozycję/problem",
+    "con-wyb":"Wybierz jedną z opcji",
+    "con-inf":"Dziękujemy za przesłanie wiadomości",
+    "con-stp":"Zero Waste nie zarejestrowany nigdzie 2019 etc.",
+    "con-op1":"Chciałbym nawiązać współpracę",
+    "con-op2":"Mam pomysł na nową funkcję",
+    "con-op3":"Mam problem z aplikacją",
+    "con-op4":"",
+    "con-op5":""
   }
 }
