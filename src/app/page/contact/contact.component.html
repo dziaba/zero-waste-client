@@ -1,0 +1,22 @@
+<br><mat-form-field  class="csform" appearance="outline">
+    <mat-label>Temat</mat-label>
+    <input #log1 matInput placeholder="Temat" color="primary">
+  </mat-form-field>
+<br><br><br>
+  <mat-form-field class="csform" appearance="outline">
+      <mat-label>Wybierz kategorię wiadomości</mat-label>
+      <select matNativeControl required>
+        <option value="1">Chęć współpracy, organizacji</option>
+        <option value="2">Zgłoszenie Błędów w aplikacji</option>
+        <option value="3">Promocja</option>
+        <option value="4">Inne</option>
+      </select>
+    </mat-form-field>
+<br><br><br>
+<mat-form-field class="csform" appearance="outline">
+    <mat-label>Treść Wiadomości</mat-label>
+    <textarea matInput class="csform2"></textarea>
+  </mat-form-field>
+
+<br><br>
+<button class="csbutton" (click)='funkcja()' mat-stroked-button color="primary">WYŚLIJ WIADOMOŚĆ </button>

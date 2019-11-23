@@ -1,0 +1,18 @@
+<ng-container *ngIf="reje===false"><p>{{'login.login-nag'| translate}}</p>
+<form #flog="ngForm" (ngSubmit)="wyslijlog()">
+<p>{{'login.login-log'| translate}}<input #loginlog="ngModel" id="login" class=form-control name="login" required [(ngModel)]="logusr.login" type="text"><ng-container *ngIf="loginlog.invalid && (loginlog.dirty || loginlog.touched)">{{'login.reje-er3'|translate}}</ng-container></p>
+<p>{{'login.login-has'| translate}}<input #passwordlog="ngModel" minlength="6" id="pass" class=form-control name="pass" required [(ngModel)]="logusr.password" type="password"><ng-container *ngIf="passwordlog.invalid && (passwordlog.dirty || passwordlog.touched)">{{'login.reje-er1'|translate}}</ng-container></p>
+<p><button [disabled]="!flog.form.valid">{{'login.login-wys'| translate}}</button></p>
+</form>
+<p><button (click)="zareje()">{{'login.login-zar'| translate}}</button></p>
+</ng-container>
+<ng-container *ngIf="reje===true"><p>{{'login.reje-nag'| translate}}</p>
+<form #freg="ngForm" (ngSubmit)="wyslijrej()">
+  <p>{{'login.reje-log'| translate}}<input #login="ngModel" id="login" class=form-control name="login" required [(ngModel)]="logusr.login" type="text"><ng-container *ngIf="login.invalid && (login.dirty || login.touched)">{{'login.reje-er3'|translate}}</ng-container></p>
+  <p>{{'login.reje-has'| translate}}<input #pass="ngModel" minlength="6" id="pass" class=form-control name="pass" required [(ngModel)]="logusr.password" type="password"><ng-container *ngIf="pass.invalid && (pass.dirty || pass.touched)">{{'login.reje-er1'|translate}}</ng-container></p>
+  <p>{{'login.reje-mai'| translate}}<input email="true" #email="ngModel" id="email" class=form-control name="email" required [(ngModel)]="logusr.email" type="email"><ng-container *ngIf="email.invalid && (email.dirty || email.touched)">{{'login.reje-er3'|translate}}</ng-container></p>
+  <p>{{'login.reje-nam'| translate}}<input #name="ngModel" id="name" class=form-control name="name" required [(ngModel)]="logusr.name" type="text"><ng-container *ngIf="name.invalid && (name.dirty || name.touched)">{{'login.reje-er3'|translate}}</ng-container></p>
+  <p>{{'login.reje-sna'| translate}}<input #surename="ngModel" id="surename" class=form-control name="surename" required [(ngModel)]="logusr.surename" type="text"><ng-container *ngIf="surename.invalid && (surename.dirty || surename.touched)">{{'login.reje-er3'|translate}}</ng-container></p>
+  <p><button [disabled]="!freg.form.valid">{{'login.reje-wys'| translate}}</button></p>
+</form>
+</ng-container>
