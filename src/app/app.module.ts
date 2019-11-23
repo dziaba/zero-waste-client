@@ -31,7 +31,6 @@ export function createTranslateLoader(http: HttpClient) {
     HeaderModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    MatInputModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
