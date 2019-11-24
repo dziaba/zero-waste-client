@@ -1,18 +1,55 @@
-<ng-container *ngIf="reje===false"><p>{{'login.login-nag'| translate}}</p>
-<form #flog="ngForm" (ngSubmit)="wyslijlog()">
-<p>{{'login.login-log'| translate}}<input #loginlog="ngModel" id="login" class=form-control name="login" required [(ngModel)]="logusr.login" type="text"><ng-container *ngIf="loginlog.invalid && (loginlog.dirty || loginlog.touched)">{{'login.reje-er3'|translate}}</ng-container></p>
-<p>{{'login.login-has'| translate}}<input #passwordlog="ngModel" minlength="6" id="pass" class=form-control name="pass" required [(ngModel)]="logusr.password" type="password"><ng-container *ngIf="passwordlog.invalid && (passwordlog.dirty || passwordlog.touched)">{{'login.reje-er1'|translate}}</ng-container></p>
-<p><button [disabled]="!flog.form.valid">{{'login.login-wys'| translate}}</button></p>
-</form>
-<p><button (click)="zareje()">{{'login.login-zar'| translate}}</button></p>
-</ng-container>
-<ng-container *ngIf="reje===true"><p>{{'login.reje-nag'| translate}}</p>
-<form #freg="ngForm" (ngSubmit)="wyslijrej()">
-  <p>{{'login.reje-log'| translate}}<input #login="ngModel" id="login" class=form-control name="login" required [(ngModel)]="logusr.login" type="text"><ng-container *ngIf="login.invalid && (login.dirty || login.touched)">{{'login.reje-er3'|translate}}</ng-container></p>
-  <p>{{'login.reje-has'| translate}}<input #pass="ngModel" minlength="6" id="pass" class=form-control name="pass" required [(ngModel)]="logusr.password" type="password"><ng-container *ngIf="pass.invalid && (pass.dirty || pass.touched)">{{'login.reje-er1'|translate}}</ng-container></p>
-  <p>{{'login.reje-mai'| translate}}<input email="true" #email="ngModel" id="email" class=form-control name="email" required [(ngModel)]="logusr.email" type="email"><ng-container *ngIf="email.invalid && (email.dirty || email.touched)">{{'login.reje-er3'|translate}}</ng-container></p>
-  <p>{{'login.reje-nam'| translate}}<input #name="ngModel" id="name" class=form-control name="name" required [(ngModel)]="logusr.name" type="text"><ng-container *ngIf="name.invalid && (name.dirty || name.touched)">{{'login.reje-er3'|translate}}</ng-container></p>
-  <p>{{'login.reje-sna'| translate}}<input #surename="ngModel" id="surename" class=form-control name="surename" required [(ngModel)]="logusr.surename" type="text"><ng-container *ngIf="surename.invalid && (surename.dirty || surename.touched)">{{'login.reje-er3'|translate}}</ng-container></p>
-  <p><button [disabled]="!freg.form.valid">{{'login.reje-wys'| translate}}</button></p>
-</form>
-</ng-container>
+<section>
+  <br>
+  <div class="csform" *ngIf="reje===false">
+
+    <mat-form-field class="csform" appearance="outline">
+      <mat-label>Login użytkownika</mat-label>
+      <input #log1 matInput placeholder="Login użytkownika">
+    </mat-form-field>
+
+    <br>
+    <mat-form-field class="csform" appearance="outline">
+      <mat-label>Hasło użytkownika</mat-label>
+      <input #pass1 matInput type='password' minlength="6" placeholder="Hasło użytkownika">
+      <mat-hint>Co najmniej 6 znaków</mat-hint>
+    </mat-form-field>
+    <br>
+    <button (click)="zalog(log1.value,pass1.value)" class="csbutton" mat-stroked-button color="primary">ZALOGUJ
+      SIĘ</button><br><br>
+    <button (click)="zareje()" class="csbutton" mat-stroked-button color="primary">ZAREJESTRUJ SIĘ</button>
+  </div>
+  <div class="csform" *ngIf="reje===true">
+
+    <mat-form-field class="csform" appearance="outline">
+      <mat-label>Login użytkownika</mat-label>
+      <input #log matInput placeholder="Login użytkownika">
+    </mat-form-field>
+
+    <br>
+    <mat-form-field class="csform" appearance="outline">
+      <mat-label>Hasło użytkownika</mat-label>
+      <input #pass matInput type='password' minlength="6" placeholder="Hasło użytkownika">
+      <mat-hint>Co najmniej 6 znaków</mat-hint>
+    </mat-form-field>
+
+    <br>
+    <mat-form-field class="csform" appearance="outline">
+      <mat-label>Adres e-mail</mat-label>
+      <input #email email="true" matInput placeholder="Adres e-mail">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="csform" appearance="outline">
+      <mat-label>Imię użytkownika</mat-label>
+      <input #imie matInput placeholder="Imię użytkownika">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="csform" appearance="outline">
+      <mat-label>Nazwisko użytkownika</mat-label>
+      <input #nazw matInput placeholder="Nazwisko użytkownika">
+    </mat-form-field>
+    <br>
+    <button (click)="rejestr(log.value,pass.value,email.value,imie.value,nazw.value)" class="csbutton"
+      mat-stroked-button color="primary">ZAREJESTRUJ SIĘ</button>
+  </div>
+
+</section>

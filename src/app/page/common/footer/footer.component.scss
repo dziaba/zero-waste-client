@@ -1,0 +1,40 @@
+footer {
+  display: flex;
+  height: 150px;
+  background-color: #1a5869;
+  align-items: center;
+  clear: both;
+  position: relative;
+  height: 200px;
+
+
+  .margin-auto-footer {
+    margin: auto;
+
+    .partners {
+      font-size: 30px;
+      font-family: monospace;
+      font-weight: bold;
+    }
+
+    .small-image {
+      width: 180px;
+      padding-left: 25px;
+      padding-right: 25px;
+      cursor: pointer;
+    }
+  }
+}
+
+.fa-facebook-square,
+.fa-instagram,
+.fa-twitter-square,
+.fa-youtube {
+  width: 25px;
+  height: 25px;
+  font-size: 35px;
+  color: wheat;
+  padding-left: 25px;
+  padding-right: 25px;
+  cursor: pointer;
+}

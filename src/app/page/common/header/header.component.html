@@ -1,9 +1,13 @@
 <header class="panel-header">
-  <span (click)="home()">
+  <span class="hand" (click)="home()">
     <img class="recycle" src="/assets/images/recycle.png" alt="bin">
   </span>
-  <p class="zero-waste">Zero Waste</p>
+  <img class="small-image" src="./../../../assets/images/Zero_Waste_Logo2.png" alt="kzk">
+  <!-- <p class="zero-waste">Zero Waste</p> -->
   <div class="margin">
-      <button mat-fab class="login">Login</button>
+      <span *ngIf='uzyt.aktywny===true' class="logout">{{uzyt.login}}
+          <i class="fas fa-user"></i>
+      </span>
+      <button mat-fab (click)='plogon()' *ngIf='uzyt.aktywny!=true' class="login">Login</button>
   </div>
 </header>

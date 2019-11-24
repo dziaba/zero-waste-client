@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./knowladge.component.scss']
 })
 export class KnowladgeComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit() {

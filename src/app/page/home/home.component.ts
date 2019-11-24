@@ -9,7 +9,6 @@ import { KnowladgeComponent } from './knowladge/knowladge.component';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
   constructor(private _router: Router) { }
 
   ngOnInit() {
@@ -24,6 +23,17 @@ export class HomeComponent implements OnInit {
   }
   zeroWaste(){
     this._router.navigate(['/zero-waste']);
+  }
+  profile(){
+    this._router.navigate(['/profile']);
+  }
+
+  contact(){
+    this._router.navigate(['/contact']);
+  }
+
+  rankings(){
+    this._router.navigate(['/ranking']);
   }
 }
 

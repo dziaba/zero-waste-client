@@ -1,14 +1,14 @@
 <section>
   <div class="parent">
-    <div class="div1">
+    <div class="div1" pTooltip="Wkrótce dostępne" tooltipPosition="top" positionStyle="font-size: 45px;">
       <p>Wydarzenia</p>
       <img class="news" src="/assets/images/news.png" alt="news">
     </div>
-    <div class="div2">
+    <div class="div2" pTooltip="Wkrótce dostępne" tooltipPosition="top" positionStyle="font-size: 45px;">
       <p>Follow</p>
       <img class="news" src="/assets/images/follow.png" alt="follow">
     </div>
-    <div class="div3">
+    <div class="div3" (click)="rankings()">
       <p>Ranking</p>
       <img class="news" src="/assets/images/lista.png" alt="lista">
     </div>
@@ -24,19 +24,13 @@
       <p>Zero Waste</p>
       <img class="news" src="/assets/images/zero.png" alt="zero">
     </div>
-    <div class="div7">
+    <div class="div7" (click)="profile()">
       <p>Profil</p>
       <img class="news" src="/assets/images/profil.png" alt="profil">
     </div>
-    <div class="div8">
+    <div class="div8" (click)="contact()">
       <p>Kontakt</p>
       <img class="news" src="/assets/images/contact.png" alt="contact">
     </div>
   </div>
 </section>
-<footer>
-  <i class="fab fa-facebook-square"></i>
-  <i class="fab fa-instagram"></i>
-  <i class="fab fa-twitter-square"></i>
-  <i class="fab fa-youtube"></i>
-</footer>
